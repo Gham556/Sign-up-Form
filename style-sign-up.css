@@ -3,45 +3,112 @@
     src: url('Norse-Bold.otf') format('otf');
     font-weight: normal;
     font-style: normal;
+    
+      
 }
 
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+   
 body {
     display: flex;
     height: 100%;
     background: #000;
+    font: 1.2rem 'norsebold', monospace;
+    color: white;
 }
 
 div#image-sidebar {
     background-image: url('mike-marrah-gRB4Euk4BYQ-unsplash.jpg');
     background-position: center;
-    background-size: 100vh;
+    background-size: max(100vh, 633px);
+    overflow: hidden;
     background-repeat: no-repeat;
-    width: 30vw;
+    width: 40vw;
     height: 100vh;
 }
 
-div.right {
-    width: 70vw;
-    height: 100vh;
+div#image-sidebar> .overlay {
+    background: rgba(0,0,0,0.5);
+    height: 100px;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
 
-  font: 1em 'norsebold', monospace;
-  color: white;
+    position: relative;
+    top: 20vh;
     
 }
 
-div#main {
-    height: 32.5vh;
+.overlay> *{
+    height: 100%;
+    
+    font-size: 3rem;
 }
 
-form {
-    height: 25vh;
+.overlay> div {
+    height: fit-content;
+}
+
+/*right side*/
+
+div.right {
+    width: 70vw;
+    
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    flex-flow: column nowrap;
+    height: 100vh;
+}
+
+div#main {
+    width: 90%;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+form {  
+
+    padding-top: 10vh;
+    padding-bottom: 20px;
+    margin-right: 20vh;
+  
+}
+
+
+.form {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 10px;
+    grid-gap: 8px;
+    
+    column-gap: 32vh;
+
 }
 
 footer {
     margin-top: auto;
-   
+   display: flex;
+   align-items: flex-start;
     
+}
+
+footer> * {
+    margin-top: 0%;
+}
+
+.shift {
+    margin-left: 3vw;
+}
+
+.form> div {
+    max-width: 47px;
 }
