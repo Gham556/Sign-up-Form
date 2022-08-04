@@ -112,3 +112,24 @@ footer> * {
 .form> div {
     max-width: 47px;
 }
+
+/* buttons and inputs */
+
+input {
+    border: none;
+    margin  : 0;
+  
+    font: 1.2rem 'norsebold', monospace;
+    
+}
+
+
+input:focus {
+    background: rgba(0,0,0,0.5);
+    color: white;
+}
+
+input:invalid {
+    border: 2px;
+    border-color: orange;
+}
